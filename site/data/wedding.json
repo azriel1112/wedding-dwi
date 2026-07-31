@@ -1,0 +1,76 @@
+{
+  "siteTitle": "The Wedding of Dwi & Abu",
+  "openingText": "Dengan memohon rahmat dan ridho Tuhan Yang Maha Esa, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dalam acara pernikahan kami.",
+  "couple": {
+    "brideShort": "Dwi",
+    "groomShort": "Abu",
+    "brideFull": "Dwi Septiani",
+    "groomFull": "Abu Hanifah",
+    "brideParents": "Anak Kedua dari (Alm) Bapak Rohadi dan Ibu Nur Indah",
+    "groomParents": "Anak Ketiga dari (Alm) Bapak Mulyadi dan Ibu Ulliyah"
+  },
+  "event": {
+    "dateTime": "2026-08-08T09:00:00+07:00",
+    "displayDate": "Sabtu, 08 Agustus 2026",
+    "timeZone": "Asia/Jakarta",
+    "akad": {
+      "title": "Akad Nikah",
+      "time": "09.00–10.00 WIB"
+    },
+    "reception": {
+      "title": "Resepsi",
+      "time": "11.00–14.00 WIB"
+    }
+  },
+  "venue": {
+    "name": "Gedung Sasana Kriya, Taman Mini Indonesia Indah",
+    "address": "Jl. Taman Mini Indonesia Indah, Ceger, Cipayung, Jakarta Timur",
+    "mapsEmbedUrl": "https://www.google.com/maps?q=Gedung%20Sasana%20Kriya%20TMII&output=embed",
+    "mapsDirectionsUrl": "https://www.google.com/maps/search/?api=1&query=Gedung+Sasana+Kriya+TMII"
+  },
+  "bankAccounts": [
+    {
+      "bank": "BCA",
+      "number": "000123456789",
+      "holder": "Dwi Septiani"
+    },
+    {
+      "bank": "Mandiri",
+      "number": "000987654321",
+      "holder": "Abu Hanifah"
+    }
+  ],
+  "story": [
+    {
+      "year": "2022",
+      "title": "Pertama Bertemu",
+      "description": "Kami pertama kali bertemu dalam sebuah kegiatan kampus. Pertemuan sederhana tersebut menjadi awal dari banyak percakapan dan cerita bersama."
+    },
+    {
+      "year": "2024",
+      "title": "Menjalin Komitmen",
+      "description": "Setelah saling mengenal lebih dekat, kami memutuskan untuk melangkah bersama dan membangun hubungan yang lebih serius."
+    },
+    {
+      "year": "2026",
+      "title": "Menuju Hari Bahagia",
+      "description": "Dengan dukungan keluarga, kami memilih untuk mengikat janji pernikahan dan memulai perjalanan baru sebagai keluarga."
+    }
+  ],
+  "gallery": [
+    "/assets/gallery-1.svg",
+    "/assets/gallery-2.svg",
+    "/assets/gallery-3.svg",
+    "/assets/gallery-4.svg"
+  ],
+  "contact": {
+    "whatsapp": "6281234567890",
+    "whatsappLabel": "Hubungi keluarga"
+  },
+  "settings": {
+    "maxGuests": 5,
+    "rsvpDeadline": "2026-08-07",
+    "showWishes": true,
+    "defaultGuestName": "Tamu Undangan"
+  }
+}

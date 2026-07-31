@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Undangan pernikahan digital lengkap dengan lokasi, hadiah, dan konfirmasi kehadiran."
+    />
+    <title>Undangan Pernikahan</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body class="locked">
+    <div class="opening-screen" id="openingScreen" aria-labelledby="openingTitle">
+      <div class="opening-card">
+        <p class="eyebrow">Undangan Pernikahan</p>
+        <h1 id="openingTitle"><span data-bride-short>Alya</span> &amp; <span data-groom-short>Raka</span></h1>
+        <p>Kepada Yth.</p>
+        <strong id="guestName">Tamu Undangan</strong>
+        <p class="opening-note">Mohon maaf apabila terdapat kesalahan penulisan nama atau gelar.</p>
+        <button class="button button-primary" id="openInvitation" type="button">
+          Buka Undangan
+        </button>
+      </div>
+    </div>
+
+    <header class="hero section" id="home">
+      <nav class="navbar" aria-label="Navigasi utama">
+        <a class="brand" href="#home"><span data-bride-short>Dwi</span> &amp; <span data-groom-short>Abu</span></a>
+        <div class="nav-links">
+          <a href="#event">Acara</a>
+          <a href="#location">Lokasi</a>
+          <a href="#gift">Hadiah</a>
+          <a href="#rsvp">RSVP</a>
+        </div>
+      </nav>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">The Wedding of</p>
+        <h1><span data-bride-short>Dwi</span> <i>&amp;</i> <span data-groom-short>Abu</span></h1>
+        <p class="hero-date" id="heroDate">Sabtu, 12 Desember 2026</p>
+        <a class="button button-light" href="#event">Lihat Detail Acara</a>
+      </div>
+      <div class="hero-scroll" aria-hidden="true">Scroll</div>
+    </header>
+
+    <main>
+      <section class="section intro-section">
+        <div class="container narrow reveal">
+          <p class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+          <h2>Assalamu’alaikum Warahmatullahi Wabarakatuh</h2>
+          <p id="openingText">
+            Dengan memohon rahmat dan ridho Tuhan Yang Maha Esa, kami mengundang
+            Bapak/Ibu/Saudara/i untuk hadir dalam acara pernikahan kami.
+          </p>
+        </div>
+      </section>
+
+      <section class="section couple-section">
+        <div class="container couple-grid">
+          <article class="couple-card reveal">
+            <img src="/assets/bride.svg" alt="Placeholder foto mempelai wanita" />
+            <p class="eyebrow">Mempelai Wanita</p>
+            <h2 id="brideFull">Alya Putri Maharani, S.Kom.</h2>
+            <p id="brideParents">Putri dari Bapak Ahmad Maharani dan Ibu Siti Rahma</p>
+          </article>
+
+          <div class="couple-divider reveal" aria-hidden="true">&amp;</div>
+
+          <article class="couple-card reveal">
+            <img src="/assets/groom.svg" alt="Placeholder foto mempelai pria" />
+            <p class="eyebrow">Mempelai Pria</p>
+            <h2 id="groomFull">Raka Pratama Wijaya, S.Kom.</h2>
+            <p id="groomParents">Putra dari Bapak Budi Wijaya dan Ibu Dewi Lestari</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section countdown-section" aria-labelledby="countdownTitle">
+        <div class="container reveal">
+          <p class="eyebrow">Menuju Hari Bahagia</p>
+          <h2 id="countdownTitle">Save the Date</h2>
+          <div class="countdown" id="countdown">
+            <div><strong id="days">0</strong><span>Hari</span></div>
+            <div><strong id="hours">0</strong><span>Jam</span></div>
+            <div><strong id="minutes">0</strong><span>Menit</span></div>
+            <div><strong id="seconds">0</strong><span>Detik</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section event-section" id="event">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Rangkaian Acara</p>
+            <h2>Detail Pernikahan</h2>
+            <p id="eventDisplayDate">Sabtu, 12 Desember 2026</p>
+          </div>
+
+          <div class="event-grid">
+            <article class="event-card reveal">
+              <span class="event-icon" aria-hidden="true">♡</span>
+              <h3 id="akadTitle">Akad Nikah</h3>
+              <p id="akadTime">09.00–10.00 WIB</p>
+              <p>Prosesi akad dan doa bersama keluarga.</p>
+            </article>
+            <article class="event-card reveal">
+              <span class="event-icon" aria-hidden="true">✦</span>
+              <h3 id="receptionTitle">Resepsi</h3>
+              <p id="receptionTime">11.00–14.00 WIB</p>
+              <p>Resepsi dan ramah tamah bersama para tamu.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section location-section" id="location">
+        <div class="container location-grid">
+          <div class="location-copy reveal">
+            <p class="eyebrow">Lokasi Acara</p>
+            <h2 id="venueName">Gedung Sasana Kriya, TMII</h2>
+            <p id="venueAddress">Jakarta Timur</p>
+            <a
+              class="button button-primary"
+              id="directionsLink"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Buka Petunjuk Arah
+            </a>
+          </div>
+          <div class="map-wrapper reveal">
+            <iframe
+              id="mapsFrame"
+              title="Peta lokasi pernikahan"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section class="section story-section" id="story">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Our Story</p>
+            <h2>Perjalanan Kami</h2>
+          </div>
+          <div class="timeline" id="storyList"></div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="gallery">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Galeri</p>
+            <h2>Momen Bersama</h2>
+            <p>Ganti gambar contoh berikut dengan foto prewedding milik client.</p>
+          </div>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </div>
+      </section>
+
+      <section class="section gift-section" id="gift">
+        <div class="container narrow">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Wedding Gift</p>
+            <h2>Tanda Kasih</h2>
+            <p>
+              Kehadiran dan doa restu Anda merupakan hadiah terindah bagi kami. Namun,
+              apabila ingin memberikan tanda kasih, dapat melalui rekening berikut.
+            </p>
+          </div>
+          <div class="account-list" id="accountList"></div>
+        </div>
+      </section>
+
+      <section class="section rsvp-section" id="rsvp">
+        <div class="container rsvp-grid">
+          <div class="rsvp-copy reveal">
+            <p class="eyebrow">Konfirmasi Kehadiran</p>
+            <h2>RSVP</h2>
+            <p>
+              Silakan isi formulir agar keluarga mempelai dapat mempersiapkan acara dengan
+              lebih baik.
+            </p>
+            <p class="deadline" id="rsvpDeadline"></p>
+          </div>
+
+          <form class="rsvp-form reveal" id="rsvpForm" novalidate>
+            <label>
+              Nama lengkap
+              <input type="text" name="name" maxlength="80" required />
+              <small class="field-error" data-error-for="name"></small>
+            </label>
+
+            <label>
+              Nomor WhatsApp <span>(opsional)</span>
+              <input type="tel" name="phone" maxlength="30" placeholder="08xxxxxxxxxx" />
+              <small class="field-error" data-error-for="phone"></small>
+            </label>
+
+            <label>
+              Konfirmasi kehadiran
+              <select name="attendance" required>
+                <option value="">Pilih status</option>
+                <option value="attending">Ya, saya akan hadir</option>
+                <option value="not_attending">Maaf, saya tidak dapat hadir</option>
+                <option value="maybe">Masih belum dapat memastikan</option>
+              </select>
+              <small class="field-error" data-error-for="attendance"></small>
+            </label>
+
+            <label id="guestCountField">
+              Jumlah tamu yang hadir
+              <input type="number" name="guestCount" min="1" value="1" />
+              <small class="field-error" data-error-for="guestCount"></small>
+            </label>
+
+            <label>
+              Ucapan dan doa
+              <textarea name="message" rows="5" maxlength="500"></textarea>
+            </label>
+
+            <p class="privacy-note">
+              Data RSVP hanya digunakan untuk kebutuhan acara dan dapat dilihat oleh admin.
+            </p>
+            <button class="button button-primary" type="submit" id="submitRsvp">
+              Kirim Konfirmasi
+            </button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section wishes-section" id="wishesSection">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Ucapan Tamu</p>
+            <h2>Doa dan Harapan</h2>
+          </div>
+          <div class="wishes-grid" id="wishesList"></div>
+        </div>
+      </section>
+
+      <section class="section closing-section">
+        <div class="container narrow reveal">
+          <p>
+            Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir
+            dan memberikan doa restu.
+          </p>
+          <h2><span data-bride-short>Alya</span> &amp; <span data-groom-short>Raka</span></h2>
+          <a
+            class="button button-light"
+            id="whatsappLink"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Hubungi Keluarga
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Dibuat dengan penuh kasih untuk hari yang istimewa.</p>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Kembali ke atas">↑</button>
+    <!-- Background music -->
+<audio id="backgroundMusic" autoplay loop preload="auto">
+  <source
+    src="/assets/music/music-wedding.mp3"
+    type="audio/mpeg"
+  />
+  Browser Anda tidak mendukung audio.
+</audio>
+
+<button
+  id="musicControl"
+  class="music-control"
+  type="button"
+  aria-label="Putar musik"
+  title="Putar musik"
+>
+  ▶
+</button>
+
+<script src="/data/integration.js"></script>
+<script src="/js/app.js" defer></script>
+  </body>
+</html>

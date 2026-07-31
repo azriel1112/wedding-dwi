@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-label="Placeholder galeri 1">
+  <defs><linearGradient id="x1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b8aa96
+#7f8b78
+#d5c5af"/><stop offset="1" stop-color="#66735f
+#d7c5aa
+#788572"/></linearGradient></defs>
+  <rect width="1000" height="700" fill="url(#x1)"/>
+  <circle cx="310" cy="160" r="85" fill="#fff" fill-opacity=".15"/>
+  <circle cx="745" cy="495" r="110" fill="#fff7e9" fill-opacity=".18"/>
+  <path d="M250 560c65-160 175-240 250-240s185 80 250 240" fill="none" stroke="#fff8ec" stroke-opacity=".45" stroke-width="10"/>
+  <text x="500" y="615" text-anchor="middle" fill="#fff9f0" font-family="Georgia, serif" font-size="46">Foto Prewedding 1</text>
+</svg>

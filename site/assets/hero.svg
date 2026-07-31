@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Ilustrasi dekorasi pernikahan">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9b79f"/>
+      <stop offset=".5" stop-color="#8d9a82"/>
+      <stop offset="1" stop-color="#52604d"/>
+    </linearGradient>
+    <radialGradient id="light" cx="50%" cy="34%" r="55%">
+      <stop offset="0" stop-color="#fff7e9" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#light)"/>
+  <g opacity=".42" fill="#f4e8d6" filter="url(#blur)">
+    <circle cx="260" cy="200" r="120"/>
+    <circle cx="1320" cy="230" r="150"/>
+    <circle cx="400" cy="820" r="170"/>
+    <circle cx="1250" cy="810" r="130"/>
+  </g>
+  <g fill="none" stroke="#f6ead7" stroke-opacity=".56" stroke-width="10">
+    <path d="M-80 940C220 700 260 430 60 100"/>
+    <path d="M1680 930c-300-230-350-520-120-850"/>
+  </g>
+  <g fill="#e8dac5" opacity=".72">
+    <ellipse cx="110" cy="770" rx="55" ry="125" transform="rotate(-34 110 770)"/>
+    <ellipse cx="200" cy="650" rx="45" ry="110" transform="rotate(-20 200 650)"/>
+    <ellipse cx="1460" cy="730" rx="55" ry="130" transform="rotate(34 1460 730)"/>
+    <ellipse cx="1380" cy="610" rx="42" ry="105" transform="rotate(18 1380 610)"/>
+  </g>
+  <path d="M655 730c60-95 230-95 290 0" fill="none" stroke="#fff4e4" stroke-opacity=".34" stroke-width="5"/>
+  <circle cx="800" cy="615" r="98" fill="#f2e5d4" fill-opacity=".2"/>
+  <text x="800" y="640" text-anchor="middle" fill="#fff8ef" fill-opacity=".72" font-family="Georgia, serif" font-size="92">D &amp; A</text>
+</svg>

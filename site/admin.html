@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Pengelolaan RSVP</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/admin.css" />
+  </head>
+  <body>
+    <main class="admin-shell">
+      <section class="login-panel" id="adminPanel">
+        <div class="login-card">
+          <p class="eyebrow">Pengelolaan RSVP</p>
+          <h1>Google Sheets</h1>
+          <p>
+            Versi statis tidak memerlukan server Node.js. Data RSVP dikelola langsung
+            melalui Google Sheets yang terhubung ke Google Apps Script.
+          </p>
+          <a class="secondary-button" id="sheetLink" href="#" target="_blank" rel="noopener noreferrer">
+            Buka Data RSVP
+          </a>
+          <p class="status" id="adminStatus" role="status"></p>
+          <a href="/">← Kembali ke undangan</a>
+        </div>
+      </section>
+    </main>
+    <script src="/data/integration.js"></script>
+    <script>
+      const config = window.WEDDING_INTEGRATION || {};
+      const link = document.querySelector('#sheetLink');
+      const status = document.querySelector('#adminStatus');
+      if (config.spreadsheetUrl) {
+        link.href = config.spreadsheetUrl;
+      } else {
+        link.hidden = true;
+        status.textContent = 'Isi spreadsheetUrl pada /data/integration.js setelah Google Sheet dibuat.';
+      }
+    </script>
+  </body>
+</html>

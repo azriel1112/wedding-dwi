@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Placeholder foto mempelai pria">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#77836f"/><stop offset="1" stop-color="#cbb99e"/></linearGradient></defs>
+  <rect width="800" height="1000" fill="url(#g)"/>
+  <circle cx="400" cy="320" r="150" fill="#edcfb4"/>
+  <path d="M250 305c8-125 68-185 150-185 92 0 147 73 150 185-48-36-98-54-150-54s-102 18-150 54Z" fill="#3f3934"/>
+  <path d="M130 1000c28-315 117-480 270-480s242 165 270 480Z" fill="#303b35"/>
+  <path d="m400 565-60 170 60 65 60-65Z" fill="#e7dac8"/>
+  <g fill="#fff8eb" opacity=".4"><circle cx="115" cy="170" r="60"/><circle cx="690" cy="115" r="42"/><circle cx="675" cy="820" r="88"/></g>
+  <text x="400" y="920" text-anchor="middle" fill="#f7eee0" font-family="Georgia, serif" font-size="42">Ganti dengan foto mempelai</text>
+</svg>
