@@ -459,58 +459,90 @@ async function loadWishes() {
   if (state.config?.settings?.showWishes === false) return;
 
   const list = document.querySelector('#wishesList');
-  const integration = getIntegrationConfig();
+
+  if (!list) return;
 
   try {
-    let result;
+    const response = await fetch(
+      `/api/wishes?limit=12&_=${Date.now()}`,
+      {
+        method: 'GET',
+        cache: 'no-store',
+        headers: {
+          Accept: 'application/json'
+        }
+      }
+    );
 
-    if (integration.mode === 'google-apps-script' && integration.webAppUrl) {
-      result = await loadJsonp(integration.webAppUrl, { action: 'wishes', limit: '12' });
-    } else {
-      const response = await fetch(integration.fallbackWishesUrl, { cache: 'no-store' });
-      result = await response.json();
-      if (!response.ok) throw new Error('Gagal mengambil ucapan.');
+    if (!response.ok) {
+      throw new Error(
+        `Gagal mengambil ucapan. HTTP ${response.status}`
+      );
     }
 
-    const wishes = Array.isArray(result?.wishes) ? result.wishes : [];
+    const result = await response.json();
+
+    if (result?.ok === false) {
+      throw new Error(
+        result.message || 'Gagal mengambil ucapan.'
+      );
+    }
+
+    const wishes = Array.isArray(result?.wishes)
+      ? result.wishes
+      : [];
+
     list.replaceChildren();
 
     if (!wishes.length) {
       const empty = document.createElement('p');
+
       empty.className = 'empty-state';
-      empty.textContent = 'Belum ada ucapan. Jadilah tamu pertama yang memberikan doa.';
+      empty.textContent =
+        'Belum ada ucapan. Jadilah tamu pertama yang memberikan doa.';
+
       list.append(empty);
       return;
     }
 
     for (const wish of wishes) {
       const card = document.createElement('article');
+
       card.className = 'wish-card reveal';
 
       const name = document.createElement('h3');
-      name.textContent = wish.name;
+      name.textContent = wish.name || 'Tamu';
 
       const meta = document.createElement('p');
       meta.className = 'wish-meta';
-      meta.textContent = `${attendanceLabels[wish.attendance] ?? 'Tamu'} • ${formatDate(wish.createdAt)}`;
+
+      meta.textContent =
+        `${attendanceLabels[wish.attendance] ?? 'Tamu'} • ` +
+        `${formatDate(wish.createdAt)}`;
 
       const message = document.createElement('p');
-      message.textContent = wish.message;
+      message.textContent = wish.message || '';
 
       card.append(name, meta, message);
       list.append(card);
     }
 
     observeRevealElements();
-  } catch {
+
+  } catch (error) {
+    console.error('Gagal menampilkan ucapan:', error);
+
     list.replaceChildren();
+
     const empty = document.createElement('p');
+
     empty.className = 'empty-state';
-    empty.textContent = 'Ucapan belum dapat ditampilkan.';
+    empty.textContent =
+      'Ucapan belum dapat ditampilkan.';
+
     list.append(empty);
   }
 }
-
 let revealObserver;
 function observeRevealElements() {
   if (!('IntersectionObserver' in window)) {
