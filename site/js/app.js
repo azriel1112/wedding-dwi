@@ -95,31 +95,58 @@ function buildWhatsappRsvpUrl(payload) {
 
 function loadJsonp(url, params = {}) {
   return new Promise((resolve, reject) => {
-    const callbackName = `weddingJsonp_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+    const callbackName =
+      `weddingJsonp_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+
     const script = document.createElement('script');
-    const timeout = window.setTimeout(() => cleanup(new Error('Waktu pengambilan ucapan habis.')), 12000);
+
+    const timeout = window.setTimeout(() => {
+      cleanup(new Error('Waktu pengambilan ucapan habis.'));
+    }, 15000);
 
     function cleanup(error, value) {
       window.clearTimeout(timeout);
-      script.remove();
+
+      if (script.parentNode) {
+        script.remove();
+      }
+
       delete window[callbackName];
-      if (error) reject(error);
-      else resolve(value);
+
+      if (error) {
+        reject(error);
+      } else {
+        resolve(value);
+      }
     }
 
-    window[callbackName] = (value) => cleanup(null, value);
+    window[callbackName] = (value) => {
+      cleanup(null, value);
+    };
 
     const target = new URL(url);
-    Object.entries(params).forEach(([key, value]) => target.searchParams.set(key, value));
+
+    Object.entries(params).forEach(([key, value]) => {
+      target.searchParams.set(key, value);
+    });
+
     target.searchParams.set('callback', callbackName);
+
+    // Anti-cache terutama untuk browser mobile
+    target.searchParams.set('_', Date.now().toString());
 
     script.src = target.toString();
     script.async = true;
-    script.onerror = () => cleanup(new Error('Ucapan tidak dapat dimuat.'));
+
+    script.onerror = () => {
+      cleanup(
+        new Error('Google Apps Script tidak dapat diakses.')
+      );
+    };
+
     document.head.appendChild(script);
   });
 }
-
 function setText(selector, value) {
   const element = document.querySelector(selector);
   if (element) element.textContent = value ?? '';
