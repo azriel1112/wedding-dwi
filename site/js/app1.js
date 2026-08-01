@@ -237,11 +237,6 @@ function renderConfig(config) {
 
 function renderStory(items) {
   const list = document.querySelector('#storyList');
-
-  // Section Our Story boleh tidak ada di index.html.
-  // Kalau elemen #storyList tidak ditemukan, lanjutkan proses website.
-  if (!list) return;
-
   list.replaceChildren();
 
   for (const item of items) {
@@ -317,20 +312,10 @@ function renderAccounts(accounts) {
 
 function startCountdown(targetDate) {
   const target = new Date(targetDate).getTime();
-
-  if (Number.isNaN(target)) {
-    console.error('Tanggal countdown tidak valid:', targetDate);
-    return;
-  }
-
-  if (state.countdownTimer) {
-    window.clearInterval(state.countdownTimer);
-    state.countdownTimer = null;
-  }
+  if (Number.isNaN(target)) return;
 
   const update = () => {
     const difference = Math.max(target - Date.now(), 0);
-
     const days = Math.floor(difference / 86_400_000);
     const hours = Math.floor((difference % 86_400_000) / 3_600_000);
     const minutes = Math.floor((difference % 3_600_000) / 60_000);
@@ -343,7 +328,6 @@ function startCountdown(targetDate) {
 
     if (difference === 0 && state.countdownTimer) {
       window.clearInterval(state.countdownTimer);
-      state.countdownTimer = null;
     }
   };
 

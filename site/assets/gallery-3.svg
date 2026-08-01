@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" role="img" aria-label="Placeholder galeri 3">
-  <defs><linearGradient id="x3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d5c5af"/><stop offset="1" stop-color="#788572"/></linearGradient></defs>
-  <rect width="1000" height="700" fill="url(#x3)"/>
-  <circle cx="570" cy="240" r="115" fill="#fff" fill-opacity=".15"/>
-  <circle cx="655" cy="445" r="90" fill="#fff7e9" fill-opacity=".18"/>
-  <path d="M250 560c65-160 175-240 250-240s185 80 250 240" fill="none" stroke="#fff8ec" stroke-opacity=".45" stroke-width="10"/>
-  <text x="500" y="615" text-anchor="middle" fill="#fff9f0" font-family="Georgia, serif" font-size="46">Foto Prewedding 3</text>
-</svg>

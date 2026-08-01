@@ -19,24 +19,24 @@
     },
     "reception": {
       "title": "Resepsi",
-      "time": "11.00–14.00 WIB"
+      "time": "11.00 WIB–selesai"
     }
   },
   "venue": {
-    "name": "Gedung Sasana Kriya, Taman Mini Indonesia Indah",
-    "address": "Jl. Taman Mini Indonesia Indah, Ceger, Cipayung, Jakarta Timur",
-    "mapsEmbedUrl": "https://www.google.com/maps?q=Gedung%20Sasana%20Kriya%20TMII&output=embed",
-    "mapsDirectionsUrl": "https://www.google.com/maps/search/?api=1&query=Gedung+Sasana+Kriya+TMII"
+    "name": "Kediaman Mempelai Laki-Laki",
+    "address": "Jl. Kalibata Timur RT 004/ RW 010 No.1",
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3966.016007134106!2d106.84907727499063!3d-6.261621293726951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMTUnNDEuOCJTIDEwNsKwNTEnMDYuMCJF!5e0!3m2!1sid!2sid!4v1785598364918!5m2!1sid!2sid",
+    "mapsDirectionsUrl": "https://maps.app.goo.gl/GFBMtsrtsrXkam7Q9"
   },
   "bankAccounts": [
     {
-      "bank": "BCA",
-      "number": "000123456789",
+      "bank": "Mandiri",
+      "number": "1240015714349",
       "holder": "Dwi Septiani"
     },
     {
-      "bank": "Mandiri",
-      "number": "000987654321",
+      "bank": "BCA",
+      "number": "1280557702",
       "holder": "Abu Hanifah"
     }
   ],
@@ -58,13 +58,13 @@
     }
   ],
   "gallery": [
-    "/assets/gallery-1.svg",
-    "/assets/gallery-2.svg",
-    "/assets/gallery-3.svg",
-    "/assets/gallery-4.svg"
+    "/assets/gallery-1.png",
+    "/assets/gallery-2.png",
+    "/assets/gallery-3.png"
+   
   ],
   "contact": {
-    "whatsapp": "6281234567890",
+    "whatsapp": "6285123294505",
     "whatsappLabel": "Hubungi keluarga"
   },
   "settings": {
